@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>Hexo</title>
     <link rel="icon" type="image/png" href="/blog/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/blog/libs/awesome/css/all.css">
@@ -310,12 +310,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/blog/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/blog/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2021-06-24
+                    2021-06-25
                 </div>
                 
 
@@ -464,19 +464,68 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h1>
+    <center>Ajax</center>
+</h1>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="一、什么是Ajax？"><a href="#一、什么是Ajax？" class="headerlink" title="一、什么是Ajax？"></a>一、什么是Ajax？</h2><p>Ajax = 异步 JavaScript 和XML。</p>
+<p>Ajax是一种用于创建快速动态网页的技术。</p>
+<p>通过在后台与服务器进行少量数据交换，Ajax可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+<p>传统的网页（不使用 Ajax）如果需要更新内容，必需重载整个网页面。</p>
+<h2 id="二、使用Ajax的好处"><a href="#二、使用Ajax的好处" class="headerlink" title="二、使用Ajax的好处"></a>二、使用Ajax的好处</h2><p>1.无刷新——不刷新整个页面，只刷新局部。</p>
+<p> 无刷新的好处</p>
+<p> 只更新部分页面，有效利用带宽</p>
+<p> 提供连续的用户体验</p>
+<p> 提供类似 C/S 的交互效果，操作更方面</p>
+<p>2.异步与服务器通信</p>
+<p>　　使用异步的方式与服务器通信，不打断用户的操作</p>
+<p>　　</p>
+<p>3.前端与后端负载均衡</p>
+<p>　　将一些后端的工作移到前端，减少服务器与带宽的负担</p>
+<p>　　</p>
+<p>4.基于规范被广泛支持</p>
+<p>　　不需要下载浏览器插件或者小程序，但需要客户允许JavaScript在浏览器上执行。</p>
+<p>　　</p>
+<p>5.界面与应用分离</p>
+<p>　　Ajax使得界面与应用分离，也就是数据与呈现分离</p>
+<h2 id="三、Ajax的语法格式"><a href="#三、Ajax的语法格式" class="headerlink" title="三、Ajax的语法格式"></a>三、Ajax的语法格式</h2><h3 id="1、-get"><a href="#1、-get" class="headerlink" title="1、$.get()"></a>1、$.get()</h3><p>语法格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.get(url ,data,success(resp,status,xhr), dataType);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p><img src="D:\软件\有道云笔记\qqE357184997BF868CA06EF871DEB4610A\b20caef48ab5480ab37fea596a1ae409\clipboard.png" alt="img"></p>
+<h3 id="2、-post"><a href="#2、-post" class="headerlink" title="2、**$.post()**"></a>2、**$.post()**</h3><p>语法格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.post(url,data,success(resp,status,xhr), dataType);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>（实现方式与get类似，只是把get改换成post，这里不再赘述~~）</p>
+<h3 id="3、load"><a href="#3、load" class="headerlink" title="3、load()"></a>3、<strong>load()</strong></h3><p>语法格式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).load(url ,data,function(result, status, xhr));</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>Ajax 封装</p>
+<p>问题：发送一次请求代码过多，发送多次请求代码冗余且重复。</p>
+<p>解决方案：将请求代码封装到函数中，发请求时调用函数即可。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ajax(&#123; </span><br><span class="line">	 type: &#x27;get&#x27;,</span><br><span class="line">     url: &#x27;http://www.example.com&#x27;,</span><br><span class="line">     success: function (data) &#123; </span><br><span class="line">         console.log(data);</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="四、Ajax-的实现步骤"><a href="#四、Ajax-的实现步骤" class="headerlink" title="四、Ajax 的实现步骤"></a>四、Ajax 的实现步骤</h2><p>创建 Ajax 对象</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var xhr = new XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+
+<p>告诉 Ajax 请求地址以及请求方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&#x27;get&#x27;, &#x27;http://www.example.com&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>发送请求</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<p>获取服务器端给与客户端的响应数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">xhr.onload = function () &#123;</span><br><span class="line"></span><br><span class="line">​     console.log(xhr.responseText);</span><br><span class="line"></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>GET 请求方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&#x27;get&#x27;, &#x27;http://www.example.com?name=zhangsan&amp;age=20&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>POST 请求方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.setRequestHeader(&#x27;Content-Type&#x27;, &#x27;application/x-www-form-urlencoded&#x27;) xhr.send(&#x27;name=zhangsan&amp;age=20&#x27;);</span><br></pre></td></tr></table></figure>
+
+<p>异步处理呢就是我们通过事件触发到 ajax，请求服务器，在这个期间无论服务器有没有响应，客户端的其他代码一样可以运行。</p>
+<p>同步处理：我们通过实践触发 ajax，请求服务器，在这个期间等待服务器处理请求， 在这个期间客户端不能做任何处理。当 ajax 执行完毕才会继续执行其他代码。</p>
 
                 
             </div>
@@ -503,7 +552,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://oneday0622.github.io/blog/2021/06/24/hello-world/">https://oneday0622.github.io/blog/2021/06/24/hello-world/</a>
+                    <a href="https://oneday0622.github.io/blog/2021/06/25/Ajax/">https://oneday0622.github.io/blog/2021/06/25/Ajax/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -708,9 +757,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/blog/2021/06/25/Ajax/">
                     <div class="card-image">
@@ -728,9 +778,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-25
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-25
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -739,6 +789,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -746,7 +797,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/blog/2021/06/24/hello-world/">
@@ -776,7 +827,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
